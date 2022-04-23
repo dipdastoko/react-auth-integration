@@ -6,6 +6,7 @@ import Register from './components/Register/Register';
 import Header from './components/Header/Header';
 import AuthProvider from './context/AuthProvider';
 import Shipping from './components/Shipping/Shipping';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
             </Route>
             <Route path='/login' element={<Login></Login>}></Route>
             <Route path='/register' element={<Register></Register>}></Route>
-            <Route path='/shipping' element={<Shipping />} />
+            <PrivateRoute path='/shipping' element={<Shipping></Shipping>} />
           </Routes>
         </BrowserRouter>
       </AuthProvider>
