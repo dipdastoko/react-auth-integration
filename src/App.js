@@ -20,7 +20,7 @@ function App() {
             </Route>
             <Route path='/login' element={<Login></Login>}></Route>
             <Route path='/register' element={<Register></Register>}></Route>
-            <PrivateRoute path='/shipping' element={<Shipping></Shipping>} />
+            <Route path='/shipping' element={<PrivateRoute><Shipping></Shipping></PrivateRoute>}></Route>
           </Routes>
         </BrowserRouter>
       </AuthProvider>
